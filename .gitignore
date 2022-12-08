@@ -3,3 +3,5 @@ elm-stuff
 node_modules
 static/tailwind.build.css
 static/elm.js
+docs/tailwind.build.css
+docs/elm.js
