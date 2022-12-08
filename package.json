@@ -20,7 +20,8 @@
   "homepage": "https://github.com/jesterxlalto/alto-components#readme",
   "dependencies": {
     "elm": "^0.19.1-5",
-    "elm-live": "^4.0.2"
+    "elm-live": "^4.0.2",
+    "flowbite": "^1.5.4"
   },
   "devDependencies": {
     "elm-book": "^1.0.1",

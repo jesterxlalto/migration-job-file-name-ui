@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{html,elm,js}'],
+  content: [
+    './src/**/*.{html,elm,js}',
+    "./node_modules/flowbite/**/*.js"
+  ],
   theme: {
     fontFamily: {
       optima: ['Optima'],
@@ -35,5 +38,8 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
+  darkMode: 'media'
 }

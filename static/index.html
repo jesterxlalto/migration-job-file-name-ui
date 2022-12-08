@@ -1,13 +1,30 @@
 <html>
 <head>
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
   <link href="/tailwind.build.css" rel="stylesheet" type="text/css"></link>
+
 </head>
 <body>
   <main></main>
+  <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
   <script src="/elm.js"></script>
   <script>
     var app = Elm.Main.init({ node: document.querySelector('main') })
-    // you can use ports and stuff here
+    
+    app.ports.copyToClipboard.subscribe(
+      text => {
+        console.log("copyToClipboard, text:", text)
+        try {
+          navigator.clipboard.writeText(text)
+          app.ports.copyReceived.send(true)
+        } catch(error){ 
+          console.error("😢 failed to copy text to clipboard, error:", error)
+          app.ports.copyReceived.send(false)
+        }
+      }
+    )
+
   </script>
+
 </body>
 </html>
