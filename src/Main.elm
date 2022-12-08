@@ -88,7 +88,7 @@ parseFilename model userText =
         ++ second
         ++ "__"
         ++ (spacesToUnderscores userText)
-        ++ ".csv"
+        ++ ".sql"
         |> Just
 
 spacesToUnderscores : String -> String

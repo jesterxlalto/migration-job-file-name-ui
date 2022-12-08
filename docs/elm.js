@@ -5864,7 +5864,7 @@ var $author$project$Main$parseFilename = F2(
 			var day = $author$project$Main$stringFromInt(
 				A2($elm$time$Time$toDay, model.zone, model.time));
 			return $elm$core$Maybe$Just(
-				'V' + (year + ($author$project$Main$monthToString(month) + (day + (hour + (minute + (second + ('__' + ($author$project$Main$spacesToUnderscores(userText) + '.csv')))))))));
+				'V' + (year + ($author$project$Main$monthToString(month) + (day + (hour + (minute + (second + ('__' + ($author$project$Main$spacesToUnderscores(userText) + '.sql')))))))));
 		}
 	});
 var $author$project$Main$update = F2(
